@@ -98,7 +98,7 @@ wording (`hazel-tide`), and the accompanied-Commissioner derogation.
 ## Scenarios (32)
 
 Mix: 6 easy, 8 boundary twins, 5 multi-rule, 3 hidden clause, 3 distractor, 3 refusal, 4 flags (12.5%). Overlays:
-multi_leg 5, personal_travel 4, multi_traveller 1, dearer_option 8, upgrade_not_taken 4, outside_air_section 6.
+multi_leg 4, personal_travel 4, multi_traveller 1, dearer_option 7, upgrade_not_taken 4, outside_air_section 6.
 
 Boundary twins (one fact each): 240/235 scheduled minutes (`garnet-sound`/`tamarind-gate`), 400/395 km of rail one
 way (`ochre-vale`/`quartz-fell`), take-off 08:00/07:55 (`juniper-bay`/`marigold-tor`), landing 22:00/22:05
