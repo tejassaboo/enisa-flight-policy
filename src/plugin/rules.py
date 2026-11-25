@@ -350,8 +350,10 @@ def from_home(trip, offers, extra, clauses, why=""):
     if protected and min(offer.fare_cents for offer in protected) < low.fare_cents:
         if extra:
             raise ValueError("a protected travel time from another departure place is not modelled")
-        return booked([low], [ReasonCode.TRAVEL_HOURS_PROTECTED, *meeting],
-                      [Clause.DEPARTURE_RETURN, Clause.TRANSPORT_RULES, Clause.AIR_TRAVEL],
+        # The traveller's wish is met here (no flight outside the hours), so LOWEST_FARE and the air-authorisation
+        # code are fair too: the booking is the lowest fare inside the hours (audit).
+        return booked([low], [ReasonCode.TRAVEL_HOURS_PROTECTED, ReasonCode.LOWEST_FARE, *rail, *meeting],
+                      [Clause.DEPARTURE_RETURN, Clause.TRANSPORT_RULES, *AIR],
                       "Lines 650-655: a staff member cannot be required to leave before 8:00 or arrive after 22:00 "
                       "(take-off and landing) unless the line manager adopts an ad hoc decision, and none is on "
                       "file. The traveller does not take the cheaper flight outside those hours, so the lowest fare "
@@ -361,8 +363,12 @@ def from_home(trip, offers, extra, clauses, why=""):
                       why + " The lowest economy fare from there (lines 724-726).")
     # The hours clause is also a fair citation when it is what keeps the lowest fare (a take-off at exactly 08:00
     # or a landing at exactly 22:00).
-    hours = [Clause.DEPARTURE_RETURN] if edge_of_hours(low) else []
+    # TRAVEL_HOURS_PROTECTED is accepted there too: an agent that says the flight lies inside the protected hours
+    # cites the right clause, and the offer alone separates it from the twin (audit).
+    hours = [Clause.DEPARTURE_RETURN, Clause.TRANSPORT_RULES] if edge_of_hours(low) else []
     reasons = [ReasonCode.LOWEST_FARE, *rail, *meeting]
+    if hours:
+        reasons.append(ReasonCode.TRAVEL_HOURS_PROTECTED)
     text = "Lines 724-726: economy, including tickets that cannot be exchanged or refunded, at the lowest available "
     text += "rates, taking into account the times of meetings"
     if rail_reason == ReasonCode.AIR_COST_EFFICIENT:

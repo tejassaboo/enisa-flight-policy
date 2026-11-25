@@ -120,7 +120,8 @@
     "reason_codes": [
       "AIR_AUTHORISED_RAIL_DISTANCE",
       "LOWEST_FARE",
-      "MEETING_TIMES"
+      "MEETING_TIMES",
+      "TRAVEL_HOURS_PROTECTED"
     ],
     "approvers": [
       "AUTHORISING_OFFICER",
@@ -130,6 +131,7 @@
     "clauses": [
       "AIR_TRAVEL",
       "DEPARTURE_RETURN",
+      "TRANSPORT_RULES",
       "TRANSPORT_TO_MISSION"
     ],
     "unclear_phrase": ""

@@ -120,6 +120,8 @@
       "ECONOMY"
     ],
     "reason_codes": [
+      "AIR_AUTHORISED_RAIL_DISTANCE",
+      "LOWEST_FARE",
       "MEETING_TIMES",
       "TRAVEL_HOURS_PROTECTED"
     ],
@@ -131,7 +133,8 @@
     "clauses": [
       "AIR_TRAVEL",
       "DEPARTURE_RETURN",
-      "TRANSPORT_RULES"
+      "TRANSPORT_RULES",
+      "TRANSPORT_TO_MISSION"
     ],
     "unclear_phrase": ""
   },

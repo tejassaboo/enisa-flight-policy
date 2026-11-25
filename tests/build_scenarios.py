@@ -349,7 +349,9 @@ def munich(km):
                  rail_fare_cents=12900, rail_minutes=230,
                  planned_return="Munich to Frankfurt nonstop on 10 December", planned_return_minutes=[60],
                  approvals=order("Frankfurt", "Frankfurt to Munich, 9-10 December, means of transport as the guide "
-                                 "allows")),
+                                 "allows"),
+                 notes=[("Any train ticket for this mission is bought separately through the rail desk, not through "
+                         "this flight booking.")]),
             [search("out", "FRA", "MUC", "2026-12-09",
                     {"am": fl("LH", "08:30"), "mid": fl("LH", "12:15"), "pm": fl("LH", "18:40")},
                     [of("am-economy", "am", "ECONOMY", 23800), of("mid-economy", "mid", "ECONOMY", 21200),
@@ -394,8 +396,9 @@ def rome(depart):
 
 scenario(
     "juniper-bay", "boundary_twin", [], ROME_REQUEST, *rome("08:00"),
-    expected("BOOK", ["first-economy"], ["ECONOMY"], ["AIR_AUTHORISED_RAIL_DISTANCE", "LOWEST_FARE", "MEETING_TIMES"],
-             SIGNED, [*AIR, "DEPARTURE_RETURN"]),
+    expected("BOOK", ["first-economy"], ["ECONOMY"], ["AIR_AUTHORISED_RAIL_DISTANCE", "LOWEST_FARE", "MEETING_TIMES",
+                                                      "TRAVEL_HOURS_PROTECTED"],
+             SIGNED, [*AIR, "DEPARTURE_RETURN", "TRANSPORT_RULES"]),
     [HOURS, TIER_ONE],
     "The first flight takes off at exactly 08:00, which is not 'before 8:00' (650-651), so it can be required; the "
     "16:05 is cheaper but lands after 12:45 (723-726). Lowest fare that lands in time: 17600 cents.",
@@ -403,8 +406,9 @@ scenario(
 
 scenario(
     "marigold-tor", "boundary_twin", ["dearer_option"], ROME_REQUEST, *rome("07:55"),
-    expected("BOOK", ["second-economy"], ["ECONOMY"], ["MEETING_TIMES", "TRAVEL_HOURS_PROTECTED"], SIGNED,
-             ["AIR_TRAVEL", "DEPARTURE_RETURN", "TRANSPORT_RULES"]),
+    expected("BOOK", ["second-economy"], ["ECONOMY"], ["AIR_AUTHORISED_RAIL_DISTANCE", "LOWEST_FARE", "MEETING_TIMES",
+                                                       "TRAVEL_HOURS_PROTECTED"], SIGNED,
+             [*AIR, "DEPARTURE_RETURN", "TRANSPORT_RULES"]),
     [HOURS, TIER_ONE],
     "The first flight takes off at 07:55, before 8:00; a staff member cannot be required to leave then without the "
     "line manager's ad hoc decision (650-655), and the traveller does not want it. The 10:15 lands in time: 21400 "
@@ -431,8 +435,9 @@ def madrid(depart):
 
 scenario(
     "ember-wharf", "boundary_twin", [], MADRID_REQUEST, *madrid("19:45"),
-    expected("BOOK", ["eve-economy"], ["ECONOMY"], ["AIR_AUTHORISED_RAIL_DISTANCE", "LOWEST_FARE"], SIGNED,
-             [*AIR, "DEPARTURE_RETURN"]),
+    expected("BOOK", ["eve-economy"], ["ECONOMY"], ["AIR_AUTHORISED_RAIL_DISTANCE", "LOWEST_FARE",
+                                                    "TRAVEL_HOURS_PROTECTED"], SIGNED,
+             [*AIR, "DEPARTURE_RETURN", "TRANSPORT_RULES"]),
     [HOURS, TIER_ONE],
     "The evening KLM flight lands at exactly 22:00, which is not 'after 22:00' (650-651), so it can be required: "
     "the lowest fare, 18300 cents.",
@@ -440,8 +445,9 @@ scenario(
 
 scenario(
     "sorrel-heath", "boundary_twin", ["dearer_option"], MADRID_REQUEST, *madrid("19:50"),
-    expected("BOOK", ["ib-economy"], ["ECONOMY"], ["TRAVEL_HOURS_PROTECTED"], SIGNED,
-             ["AIR_TRAVEL", "DEPARTURE_RETURN", "TRANSPORT_RULES"]),
+    expected("BOOK", ["ib-economy"], ["ECONOMY"], ["AIR_AUTHORISED_RAIL_DISTANCE", "LOWEST_FARE",
+                                                   "TRAVEL_HOURS_PROTECTED"], SIGNED,
+             [*AIR, "DEPARTURE_RETURN", "TRANSPORT_RULES"]),
     [HOURS, TIER_ONE],
     "The evening KLM flight lands at 22:05, after 22:00 at the place of the mission; without the line manager's ad "
     "hoc decision the traveller cannot be required to take it (650-655). The lowest fare inside the hours: Iberia "

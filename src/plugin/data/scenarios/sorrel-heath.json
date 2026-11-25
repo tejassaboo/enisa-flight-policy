@@ -120,6 +120,8 @@
       "ECONOMY"
     ],
     "reason_codes": [
+      "AIR_AUTHORISED_RAIL_DISTANCE",
+      "LOWEST_FARE",
       "TRAVEL_HOURS_PROTECTED"
     ],
     "approvers": [
@@ -130,7 +132,8 @@
     "clauses": [
       "AIR_TRAVEL",
       "DEPARTURE_RETURN",
-      "TRANSPORT_RULES"
+      "TRANSPORT_RULES",
+      "TRANSPORT_TO_MISSION"
     ],
     "unclear_phrase": ""
   },
