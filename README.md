@@ -1,5 +1,7 @@
 # ENISA Guide to Missions Flight Policy
 
+**Source of the handbook:** https://enisa.europa.eu/sites/default/files/all_files/MB_Decision_No_2018_6_on_missions_guide.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with ENISA or the European Commission.** The handbook is ENISA Management Board Decision
 MB/2018/6, which applies the Commission's *Guide to missions and authorised travel* (Commission Decision
 C(2017) 5323) by analogy to ENISA staff; it is a public EU agency decision, bundled verbatim for research. Treat it
