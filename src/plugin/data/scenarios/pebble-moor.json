@@ -1,0 +1,159 @@
+{
+  "id": "pebble-moor",
+  "category": "easy",
+  "overlays": [
+    "date_arithmetic"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The cloud certification workshop in Rome starts on Thursday 10 December at 9:00. I'll fly the day before; please book it.",
+  "trip": {
+    "traveller_name": "Daan Visser",
+    "traveller_title": "Cloud Security Expert",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Amsterdam, Netherlands",
+    "origin": "AMS",
+    "destination": "FCO",
+    "travel_date": "2026-12-09",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Cloud certification workshop, Rome, 10-11 December",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1650,
+    "rail_fare_cents": 34200,
+    "rail_minutes": 840,
+    "planned_return": "Rome to Amsterdam nonstop on 11 December",
+    "planned_return_minutes": [
+      150
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Sanne de Vries",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Amsterdam to Rome, 9-11 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Amsterdam to Rome, 9-11 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "AMS",
+        "destination": "FCO",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "am": {
+            "carrier": "KL",
+            "depart": "08:45"
+          },
+          "mid": {
+            "carrier": "KL",
+            "depart": "13:10"
+          },
+          "pm": {
+            "carrier": "KL",
+            "depart": "18:30"
+          }
+        },
+        "offers": [
+          {
+            "slot": "am-economy",
+            "flight": "am",
+            "cabin": "ECONOMY",
+            "fare_cents": 20500
+          },
+          {
+            "slot": "mid-economy",
+            "flight": "mid",
+            "cabin": "ECONOMY",
+            "fare_cents": 17900
+          },
+          {
+            "slot": "pm-economy",
+            "flight": "pm",
+            "cabin": "ECONOMY",
+            "fare_cents": 19200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "mid-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "AIR_AUTHORISED_RAIL_DISTANCE",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORT_TO_MISSION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        710,
+        712
+      ],
+      "sha256": "40efcb52e8b2fc56908d411d768c1024666696ac99584e5e00e42b67a1c74e5a",
+      "quote": "Staff going on mission are automatically authorised to travel by air if the outward and return journeys by rail would to tal at least 800 kilometres. Air travel is permitted for shorter distances when justified on grounds of cost-efficiency.",
+      "why": "air automatically authorised at 800 km of rail out and back; shorter if cost-efficient"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        738,
+        739
+      ],
+      "quote": "Staff members covered by a signed mission order may make ticket reservations with a low -cost airline.",
+      "why": "booking channel, not the fare"
+    }
+  ],
+  "design_notes": "The day before Thursday 10 December is Wednesday 9 December. Rail out and back would total 3,300 km (710-711); economy at the lowest available rate (723-726): KLM 13:10 at 17900 cents."
+}

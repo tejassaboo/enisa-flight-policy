@@ -1,0 +1,174 @@
+{
+  "id": "yarrow-point",
+  "category": "distractor",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class to Singapore on Saturday 5 December, please. The authorising officer has given me a rest day before Monday's meeting.",
+  "trip": {
+    "traveller_name": "Stefan Richter",
+    "traveller_title": "International Cooperation Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Frankfurt am Main, Germany",
+    "origin": "FRA",
+    "destination": "SIN",
+    "travel_date": "2026-12-05",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "International cyber week, Singapore, 7 December from 09:00",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 0,
+    "rail_fare_cents": 0,
+    "rail_minutes": 0,
+    "planned_return": "Singapore to Frankfurt nonstop on 9 December",
+    "planned_return_minutes": [
+      790
+    ],
+    "requested_cabin": "BUSINESS",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Petra Hoffmann",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Singapore, 5-9 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Singapore, 5-9 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "REST_PERIOD",
+        "outcome": "GRANTED",
+        "wording": "Granted: up to 24 hours' rest at the place of the mission before the meeting, the flights lasting more than ten hours.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "No train route links Frankfurt and Singapore."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "FRA",
+        "destination": "SIN",
+        "date": "2026-12-05",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "sq": {
+            "carrier": "SQ",
+            "depart": "11:30",
+            "minutes": [
+              765
+            ]
+          },
+          "lh": {
+            "carrier": "LH",
+            "depart": "21:45",
+            "minutes": [
+              765
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "sq-economy",
+            "flight": "sq",
+            "cabin": "ECONOMY",
+            "fare_cents": 91000
+          },
+          {
+            "slot": "sq-business",
+            "flight": "sq",
+            "cabin": "BUSINESS",
+            "fare_cents": 378000
+          },
+          {
+            "slot": "lh-economy",
+            "flight": "lh",
+            "cabin": "ECONOMY",
+            "fare_cents": 88000
+          },
+          {
+            "slot": "lh-business",
+            "flight": "lh",
+            "cabin": "BUSINESS",
+            "fare_cents": 395000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "sq-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "BUSINESS_SEGMENT_QUALIFIES",
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        730,
+        732
+      ],
+      "sha256": "ac2c48c64e90f01f7215b2f241d5e55b6557f4114c326e48f1f3ad5a6d3b8520",
+      "quote": "3) in business class or equivalent, at the lowest available rates, taking into account the times of meetings and/or special features of the mission, if the outward or return journey includes at least one segment involving at least four hours' continuous flying time.",
+      "why": "business if a segment has at least four hours' continuous flying"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        862,
+        866
+      ],
+      "quote": "if the total duration of the flights is at least ten hours (tiring journey), the authorising officer for commitments may decide to grant the staff member up to 24 hours' rest",
+      "why": "a rest period, not a cabin rule"
+    },
+    {
+      "lines": [
+        1240,
+        1241
+      ],
+      "quote": "In the case of high -risk destinations, staff members automatically receive travel advice",
+      "why": "security advice, not the fare"
+    }
+  ],
+  "design_notes": "The rest period (862-866) lengthens the mission and changes no ticket. The nonstop's 765-minute segment qualifies for business (730-732): the lowest business fare, Singapore Airlines 378000 cents."
+}

@@ -1,0 +1,223 @@
+{
+  "id": "lotus-cairn",
+  "category": "multi_rule",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm spending the weekend in Zurich before the Rome meeting on Monday 14 December at 10:00, so please book me from Zurich to Rome on Sunday the 13th.",
+  "trip": {
+    "traveller_name": "Hélène Fabre",
+    "traveller_title": "Market Certification Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Paris, France",
+    "origin": "ZRH",
+    "destination": "FCO",
+    "travel_date": "2026-12-13",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Certification scheme meeting, Rome, 14 December from 10:00",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1420,
+    "rail_fare_cents": 29800,
+    "rail_minutes": 660,
+    "planned_return": "Rome to Paris nonstop on 14 December, evening",
+    "planned_return_minutes": [
+      125
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Claire Dubois",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Rome and back, 13-14 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Rome and back, 13-14 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Claire Dubois",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "DEPARTURE_ELSEWHERE",
+        "outcome": "GRANTED",
+        "wording": "Ad hoc signature: departure from Zurich for personal reasons authorised; the cost comparison with Paris is attached and any extra cost is met by the traveller.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "DEPARTURE_ELSEWHERE",
+        "outcome": "GRANTED",
+        "wording": "Authorised: departure from Zurich for personal reasons; the cost comparison with Paris is attached and any extra cost is met by the traveller.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "The traveller spends the weekend in Zurich privately; the comparison flight is Paris to Rome the same day."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "ZRH",
+        "destination": "FCO",
+        "date": "2026-12-13",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "am": {
+            "carrier": "LX",
+            "depart": "10:20"
+          },
+          "pm": {
+            "carrier": "LX",
+            "depart": "17:45"
+          }
+        },
+        "offers": [
+          {
+            "slot": "am-economy",
+            "flight": "am",
+            "cabin": "ECONOMY",
+            "fare_cents": 16800
+          },
+          {
+            "slot": "pm-economy",
+            "flight": "pm",
+            "cabin": "ECONOMY",
+            "fare_cents": 15200
+          }
+        ]
+      },
+      {
+        "name": "comparison",
+        "origin": "CDG",
+        "destination": "FCO",
+        "date": "2026-12-13",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "am": {
+            "carrier": "AF",
+            "depart": "11:05"
+          },
+          "pm": {
+            "carrier": "AF",
+            "depart": "18:10"
+          }
+        },
+        "offers": [
+          {
+            "slot": "paris-am-economy",
+            "flight": "am",
+            "cabin": "ECONOMY",
+            "fare_cents": 13900
+          },
+          {
+            "slot": "paris-pm-economy",
+            "flight": "pm",
+            "cabin": "ECONOMY",
+            "fare_cents": 17100
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "pm-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "PERSONAL_CHANGE_AUTHORISED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "DEPARTURE_RETURN",
+      "MISSION_ORDER_RULES",
+      "PERSONAL_CHANGES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        672,
+        678
+      ],
+      "sha256": "99fddc25d3f10bf2240e3d8d59e728d9b997be33a733f77f89ff04d3aaa79a70",
+      "quote": "Where significantly justified in the interests of the mission, or for compelling service reasons, the authorising officer for commitments may, on an exceptional basis, authorise a departure from (and/or return to) a location other than the place of employment (see in particular the third paragraph of section 2.6.1. Duration of the mission). Authorisation may also be granted for personal reasons. In that case, section 2.2.2.4. Changes made for personal reasons of this guide will apply.",
+      "why": "departure from another location: exceptional, or for personal reasons"
+    },
+    {
+      "lines": [
+        486,
+        490
+      ],
+      "sha256": "a23221aa90c4c23cbf536479412e4fd7e93330ef1a984dc2fa5ef713c0c3ae0d",
+      "quote": "The person going on mission may be authorised to adapt the timetable, accommodation or transport arrangements for personal reasons. In that case they must include with the mission order a comparison between the proposed costs and the costs that would have been incurred without such changes. This comparison must be drawn up at the same time, using one of the methods chosen for organising the mission and based on similar conditions (see section 2.2.1.2. Booking methods).",
+      "why": "a change for personal reasons may be authorised, with a cost comparison"
+    },
+    {
+      "lines": [
+        491,
+        495
+      ],
+      "sha256": "e9972c89fce6a32cff3ab6fedecc6dc1053f38c8ef58772006ee238454980fce",
+      "quote": "any additional cost 15 arising from the changes made for personal reasons, including departure from and/or return to another location, if the comparison indicates an increase in the cost of the mission,",
+      "why": "the traveller meets any extra cost of a personal change"
+    },
+    {
+      "lines": [
+        440,
+        443
+      ],
+      "sha256": "9edda053a0f406d9651481563f774a21bb2edabf8322b9cdda3cd94d79e5a605",
+      "quote": "The line manag er and the authorising officer for commitments must give their express approval by means of an ad hoc signature in the MIPS tool in the following cases:  changes to the mission for personal reasons,  mission combined with leave,",
+      "why": "ad hoc signatures for changes for personal reasons and missions combined with leave"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        420,
+        422
+      ],
+      "quote": "the agency fees will not be reimbursed except in exceptional circumstances",
+      "why": "another agency's fees, not the ticket"
+    }
+  ],
+  "design_notes": "Departure from a place other than the place of employment may be authorised for personal reasons (672-678) under 2.2.2.4: a cost comparison, any extra cost met by the traveller (486-496); both ad hoc signatures are on file (440-443). The lowest fare from Zurich: Swiss 17:45, 15200 cents (the Paris flight at 13900 is the comparison, not the ticket)."
+}

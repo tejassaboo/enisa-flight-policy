@@ -1,0 +1,148 @@
+{
+  "id": "quartz-fell",
+  "category": "boundary_twin",
+  "overlays": [],
+  "twin_of": "ochre-vale",
+  "twin_fact": "rail distance 400 or 395 km one way",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me a flight to Munich on Wednesday 9 December for Thursday morning's standards meeting.",
+  "trip": {
+    "traveller_name": "Sabine Krüger",
+    "traveller_title": "Standardisation Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Frankfurt am Main, Germany",
+    "origin": "FRA",
+    "destination": "MUC",
+    "travel_date": "2026-12-09",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Standards committee meeting, Munich, 10 December from 09:30",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 395,
+    "rail_fare_cents": 12900,
+    "rail_minutes": 230,
+    "planned_return": "Munich to Frankfurt nonstop on 10 December",
+    "planned_return_minutes": [
+      60
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Petra Hoffmann",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Munich, 9-10 December, means of transport as the guide allows.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Munich, 9-10 December, means of transport as the guide allows.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "FRA",
+        "destination": "MUC",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "am": {
+            "carrier": "LH",
+            "depart": "08:30"
+          },
+          "mid": {
+            "carrier": "LH",
+            "depart": "12:15"
+          },
+          "pm": {
+            "carrier": "LH",
+            "depart": "18:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "am-economy",
+            "flight": "am",
+            "cabin": "ECONOMY",
+            "fare_cents": 23800
+          },
+          {
+            "slot": "mid-economy",
+            "flight": "mid",
+            "cabin": "ECONOMY",
+            "fare_cents": 21200
+          },
+          {
+            "slot": "pm-economy",
+            "flight": "pm",
+            "cabin": "ECONOMY",
+            "fare_cents": 25600
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "AIR_NOT_AUTHORISED",
+      "DISTANCE_BELOW_MINIMUM",
+      "RAIL_PREFERRED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "RAIL_TRAVEL",
+      "TRANSPORT_TO_MISSION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        710,
+        712
+      ],
+      "sha256": "40efcb52e8b2fc56908d411d768c1024666696ac99584e5e00e42b67a1c74e5a",
+      "quote": "Staff going on mission are automatically authorised to travel by air if the outward and return journeys by rail would to tal at least 800 kilometres. Air travel is permitted for shorter distances when justified on grounds of cost-efficiency.",
+      "why": "air automatically authorised at 800 km of rail out and back; shorter if cost-efficient"
+    },
+    {
+      "lines": [
+        700,
+        701
+      ],
+      "sha256": "a11b2294638bc6aef561b29712db70953e3236c8ce1d34915e06b4d5329c32a1",
+      "quote": "The cost of rail travel is reimbursed on the basis of the first class rail fare for the shortest route (either by distance or in terms of time) between the place of employment and the place of the mission. The",
+      "why": "rail is reimbursed at the first class fare"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Rail out and back totals 790 km, under 800 (710-711); air is permitted for shorter distances only on grounds of cost-efficiency (711-712), and the lowest fare (21200 cents) costs more than the first-class rail fare (12900, 700-701) on a journey of under four hours. The agency buys no flight."
+}

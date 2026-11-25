@@ -1,0 +1,184 @@
+{
+  "id": "umber-glen",
+  "category": "hidden_clause",
+  "overlays": [
+    "multi_leg",
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class to Doha on Wednesday 2 December, please; it's a long day of flying. If the guide doesn't allow it, economy; the workshop starts Thursday morning.",
+  "trip": {
+    "traveller_name": "Alberto Sanz",
+    "traveller_title": "Maritime Cybersecurity Expert",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Madrid, Spain",
+    "origin": "MAD",
+    "destination": "DOH",
+    "travel_date": "2026-12-02",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Port cybersecurity workshop, Doha, 3 December from 09:00",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 0,
+    "rail_fare_cents": 0,
+    "rail_minutes": 0,
+    "planned_return": "Doha to Madrid via Istanbul on 4 December, booked separately, scheduled at 235 and 230 minutes",
+    "planned_return_minutes": [
+      235,
+      230
+    ],
+    "requested_cabin": "BUSINESS",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Javier Ortega",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Madrid to Doha, 2-4 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Madrid to Doha, 2-4 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "No train route links Madrid and Doha."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MAD",
+        "destination": "DOH",
+        "date": "2026-12-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "tk-am": {
+            "carrier": "TK",
+            "depart": "08:30",
+            "via": [
+              "IST"
+            ],
+            "minutes": [
+              225,
+              230
+            ],
+            "layovers": [
+              70
+            ]
+          },
+          "tk-mid": {
+            "carrier": "TK",
+            "depart": "10:05",
+            "via": [
+              "IST"
+            ],
+            "minutes": [
+              225,
+              230
+            ],
+            "layovers": [
+              70
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "tk-am-economy",
+            "flight": "tk-am",
+            "cabin": "ECONOMY",
+            "fare_cents": 43000
+          },
+          {
+            "slot": "tk-am-business",
+            "flight": "tk-am",
+            "cabin": "BUSINESS",
+            "fare_cents": 149000
+          },
+          {
+            "slot": "tk-mid-economy",
+            "flight": "tk-mid",
+            "cabin": "ECONOMY",
+            "fare_cents": 45500
+          },
+          {
+            "slot": "tk-mid-business",
+            "flight": "tk-mid",
+            "cabin": "BUSINESS",
+            "fare_cents": 158000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "tk-am-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        730,
+        732
+      ],
+      "sha256": "ac2c48c64e90f01f7215b2f241d5e55b6557f4114c326e48f1f3ad5a6d3b8520",
+      "quote": "3) in business class or equivalent, at the lowest available rates, taking into account the times of meetings and/or special features of the mission, if the outward or return journey includes at least one segment involving at least four hours' continuous flying time.",
+      "why": "business if a segment has at least four hours' continuous flying"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        862,
+        866
+      ],
+      "quote": "if the total duration of the flights is at least ten hours (tiring journey), the authorising officer for commitments may decide to grant the staff member up to 24 hours' rest",
+      "why": "a rest period, not a cabin rule"
+    }
+  ],
+  "design_notes": "Seven and a half hours of flying, but in segments of 225 and 230 minutes (and 235 and 230 back): none involves four hours' continuous flying time (730-732), so economy at the lowest available rate (723-726), 43000 cents."
+}

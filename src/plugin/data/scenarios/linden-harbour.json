@@ -1,0 +1,166 @@
+{
+  "id": "linden-harbour",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I need to be in Madrid for the certification working group, which starts at 9:30 on Wednesday 9 December. Please book me a flight on Tuesday the 8th.",
+  "trip": {
+    "traveller_name": "Markus Lehmann",
+    "traveller_title": "Cybersecurity Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Frankfurt am Main, Germany",
+    "origin": "FRA",
+    "destination": "MAD",
+    "travel_date": "2026-12-08",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Certification working group at the Spanish national cybersecurity centre, Madrid, 9 December from 09:30",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1850,
+    "rail_fare_cents": 38900,
+    "rail_minutes": 780,
+    "planned_return": "Madrid to Frankfurt nonstop on 9 December",
+    "planned_return_minutes": [
+      135
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Petra Hoffmann",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Madrid, 8-9 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Madrid, 8-9 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "FRA",
+        "destination": "MAD",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "lh-am": {
+            "carrier": "LH",
+            "depart": "09:10"
+          },
+          "ib": {
+            "carrier": "IB",
+            "depart": "12:40"
+          },
+          "lh-pm": {
+            "carrier": "LH",
+            "depart": "17:05"
+          }
+        },
+        "offers": [
+          {
+            "slot": "lh-am-economy",
+            "flight": "lh-am",
+            "cabin": "ECONOMY",
+            "fare_cents": 21200
+          },
+          {
+            "slot": "ib-economy",
+            "flight": "ib",
+            "cabin": "ECONOMY",
+            "fare_cents": 18900
+          },
+          {
+            "slot": "lh-pm-economy",
+            "flight": "lh-pm",
+            "cabin": "ECONOMY",
+            "fare_cents": 24600
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "ib-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "AIR_AUTHORISED_RAIL_DISTANCE",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORT_TO_MISSION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        710,
+        712
+      ],
+      "sha256": "40efcb52e8b2fc56908d411d768c1024666696ac99584e5e00e42b67a1c74e5a",
+      "quote": "Staff going on mission are automatically authorised to travel by air if the outward and return journeys by rail would to tal at least 800 kilometres. Air travel is permitted for shorter distances when justified on grounds of cost-efficiency.",
+      "why": "air automatically authorised at 800 km of rail out and back; shorter if cost-efficient"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    },
+    {
+      "lines": [
+        449,
+        451
+      ],
+      "sha256": "cd038ecc282ca711fb6f10a8a3aa7f31d468d766065a309fa07bd5102d4ed7f9",
+      "quote": "Final reservations can be made and reservations confirmed for tickets, accommodation and any other financial commitment connected with the mission once the authorising officer for commitments has signed the mission order.",
+      "why": "final reservations once the authorising officer has signed the mission order"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        663,
+        664
+      ],
+      "quote": "staff should book their tickets at the earliest opportunity in order to take advantage of the best rates available.",
+      "why": "book early: no bar on this booking"
+    }
+  ],
+  "design_notes": "Rail out and back would total 3,700 km, so air is automatically authorised (710-711); the mission order is signed (449-451); economy at the lowest available rate (723-726): Iberia 18900 cents. The meeting is the next morning, so every flight lands in time."
+}

@@ -1,0 +1,152 @@
+{
+  "id": "violet-shoal",
+  "category": "distractor",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'd like the nonstop to Copenhagen on Wednesday 9 December, please; the CSIRT network meeting is Thursday morning.",
+  "trip": {
+    "traveller_name": "Sophie Martin",
+    "traveller_title": "CSIRT Network Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Paris, France",
+    "origin": "CDG",
+    "destination": "CPH",
+    "travel_date": "2026-12-09",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "CSIRT network meeting, Copenhagen, 10 December from 09:30",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1230,
+    "rail_fare_cents": 31500,
+    "rail_minutes": 720,
+    "planned_return": "Copenhagen to Paris nonstop on 10 December",
+    "planned_return_minutes": [
+      110
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": true,
+    "approvals": [
+      {
+        "signer_name": "Claire Dubois",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Copenhagen, 9-10 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Copenhagen, 9-10 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "CDG",
+        "destination": "CPH",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "af": {
+            "carrier": "AF",
+            "depart": "11:20"
+          },
+          "kl": {
+            "carrier": "KL",
+            "depart": "10:05",
+            "via": [
+              "AMS"
+            ],
+            "layovers": [
+              70
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "af-economy",
+            "flight": "af",
+            "cabin": "ECONOMY",
+            "fare_cents": 26500
+          },
+          {
+            "slot": "kl-economy",
+            "flight": "kl",
+            "cabin": "ECONOMY",
+            "fare_cents": 22800
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "af-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        719,
+        722
+      ],
+      "sha256": "fd0421ae326d60960eb6a2e9dda9be03733600a3baf42b2818ee557b9fe06794",
+      "quote": "Direct flights are normally preferred. However, the authorising officer for commitments may refuse to authorise a direct flight if it w ould represent a manifestly unreasonable expense given the arrangements for the mission. The principles set out in the section on 'Roles' must be duly taken into account when assessing whether an expense is manifestly unreasonable.",
+      "why": "direct flights normally preferred; the AO may refuse a manifestly unreasonable one"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        263,
+        266
+      ],
+      "quote": "the line manager may in particular ask the person concerned to use arrangements which provide optimum cost efficiency",
+      "why": "the line manager has asked for nothing"
+    },
+    {
+      "lines": [
+        663,
+        664
+      ],
+      "quote": "staff should book their tickets at the earliest opportunity in order to take advantage of the best rates available.",
+      "why": "book early: no bar on this booking"
+    }
+  ],
+  "design_notes": "Direct flights are normally preferred (719); the authorising officer has refused nothing, and a nonstop 3700 cents above the connection is no manifestly unreasonable expense. The line manager's power to ask for cheaper arrangements (263-266) was not used: the nonstop, 26500 cents."
+}

@@ -1,0 +1,159 @@
+{
+  "id": "sorrel-heath",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "ember-wharf",
+  "twin_fact": "evening flight lands 22:00 or 22:05",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'll fly to Madrid on Monday 14 December for Tuesday morning's meeting. Please don't land me in the middle of the night unless the guide leaves no choice.",
+  "trip": {
+    "traveller_name": "Pieter Bakker",
+    "traveller_title": "Network Security Expert",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Amsterdam, Netherlands",
+    "origin": "AMS",
+    "destination": "MAD",
+    "travel_date": "2026-12-14",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Network security working meeting, Madrid, 15 December from 09:00",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1770,
+    "rail_fare_cents": 36500,
+    "rail_minutes": 690,
+    "planned_return": "Madrid to Amsterdam nonstop on 15 December",
+    "planned_return_minutes": [
+      140
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Sanne de Vries",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Amsterdam to Madrid, 14-15 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Amsterdam to Madrid, 14-15 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "AMS",
+        "destination": "MAD",
+        "date": "2026-12-14",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "am": {
+            "carrier": "KL",
+            "depart": "08:30",
+            "minutes": [
+              135
+            ]
+          },
+          "ib": {
+            "carrier": "IB",
+            "depart": "16:40",
+            "minutes": [
+              135
+            ]
+          },
+          "eve": {
+            "carrier": "KL",
+            "depart": "19:50",
+            "minutes": [
+              135
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "am-economy",
+            "flight": "am",
+            "cabin": "ECONOMY",
+            "fare_cents": 24800
+          },
+          {
+            "slot": "ib-economy",
+            "flight": "ib",
+            "cabin": "ECONOMY",
+            "fare_cents": 22100
+          },
+          {
+            "slot": "eve-economy",
+            "flight": "eve",
+            "cabin": "ECONOMY",
+            "fare_cents": 18300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "ib-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "TRAVEL_HOURS_PROTECTED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "DEPARTURE_RETURN",
+      "TRANSPORT_RULES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        650,
+        655
+      ],
+      "sha256": "930f42dbcfaee4c061050eb50f82342d58063c38b283b249c00785cce98fc77e",
+      "quote": "However, a staff member going on mission cannot be required to leave before 8:00 or arrive after 22:00, either at the place of employment or at the place of the mission, unless the line manager adopts an ad hoc decision, giving reasons, which respects the principles set out in section 1.2. Roles. In this context, departure and arrival are taken to be the departure and arrival times of the main means of transport, that is to say take -off or landing in the case of an aircraft, and the times of departure and arrival of all other forms of transport.",
+      "why": "cannot be required to leave before 8:00 or arrive after 22:00 (take-off, landing)"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The evening KLM flight lands at 22:05, after 22:00 at the place of the mission; without the line manager's ad hoc decision the traveller cannot be required to take it (650-655). The lowest fare inside the hours: Iberia 16:40, 22100 cents."
+}

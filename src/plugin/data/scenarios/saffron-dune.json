@@ -1,0 +1,166 @@
+{
+  "id": "saffron-dune",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm presenting at the African cyber capacity conference in Nairobi on Monday 7 December. Please book me on Saturday 5 December, business class if the guide allows it on this trip; otherwise economy.",
+  "trip": {
+    "traveller_name": "Amélie Laurent",
+    "traveller_title": "Senior Policy Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Paris, France",
+    "origin": "CDG",
+    "destination": "NBO",
+    "travel_date": "2026-12-05",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Cyber capacity-building conference, Nairobi, 7-8 December",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 0,
+    "rail_fare_cents": 0,
+    "rail_minutes": 0,
+    "planned_return": "Nairobi to Paris nonstop on 9 December",
+    "planned_return_minutes": [
+      525
+    ],
+    "requested_cabin": "BUSINESS",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Claire Dubois",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Nairobi, 5-9 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Nairobi, 5-9 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "No train route links Paris and Nairobi."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "CDG",
+        "destination": "NBO",
+        "date": "2026-12-05",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "af": {
+            "carrier": "AF",
+            "depart": "10:30",
+            "minutes": [
+              495
+            ]
+          },
+          "kq": {
+            "carrier": "KQ",
+            "depart": "21:15",
+            "minutes": [
+              495
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "af-economy",
+            "flight": "af",
+            "cabin": "ECONOMY",
+            "fare_cents": 69000
+          },
+          {
+            "slot": "af-business",
+            "flight": "af",
+            "cabin": "BUSINESS",
+            "fare_cents": 295000
+          },
+          {
+            "slot": "kq-economy",
+            "flight": "kq",
+            "cabin": "ECONOMY",
+            "fare_cents": 64000
+          },
+          {
+            "slot": "kq-business",
+            "flight": "kq",
+            "cabin": "BUSINESS",
+            "fare_cents": 278000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kq-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "BUSINESS_SEGMENT_QUALIFIES",
+      "LONG_FLIGHT_APPROVED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        730,
+        732
+      ],
+      "sha256": "ac2c48c64e90f01f7215b2f241d5e55b6557f4114c326e48f1f3ad5a6d3b8520",
+      "quote": "3) in business class or equivalent, at the lowest available rates, taking into account the times of meetings and/or special features of the mission, if the outward or return journey includes at least one segment involving at least four hours' continuous flying time.",
+      "why": "business if a segment has at least four hours' continuous flying"
+    },
+    {
+      "lines": [
+        449,
+        451
+      ],
+      "sha256": "cd038ecc282ca711fb6f10a8a3aa7f31d468d766065a309fa07bd5102d4ed7f9",
+      "quote": "Final reservations can be made and reservations confirmed for tickets, accommodation and any other financial commitment connected with the mission once the authorising officer for commitments has signed the mission order.",
+      "why": "final reservations once the authorising officer has signed the mission order"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        1240,
+        1241
+      ],
+      "quote": "In the case of high -risk destinations, staff members automatically receive travel advice",
+      "why": "security advice, not the fare"
+    }
+  ],
+  "design_notes": "The nonstop is scheduled at 495 minutes, a segment of well over four hours' continuous flying (730-732): business at the lowest available rate, Kenya Airways 278000 cents (lands 07:30 on Sunday)."
+}

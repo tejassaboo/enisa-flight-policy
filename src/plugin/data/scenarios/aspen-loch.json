@@ -1,0 +1,176 @@
+{
+  "id": "aspen-loch",
+  "category": "multi_rule",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I have to be at the Rome meeting at 11:00 on Wednesday 2 December and land by 10:00. I'm not a fan of the 6:45 flight, but my head of unit has signed off on an early start for this one. Book whatever the guide says.",
+  "trip": {
+    "traveller_name": "Julien Moreau",
+    "traveller_title": "Data Protection Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Paris, France",
+    "origin": "CDG",
+    "destination": "FCO",
+    "travel_date": "2026-12-02",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Data protection authorities' meeting, Rome, 2 December from 11:00",
+    "must_land_by": "2026-12-02 10:00",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1420,
+    "rail_fare_cents": 29800,
+    "rail_minutes": 660,
+    "planned_return": "Rome to Paris nonstop on 2 December, evening",
+    "planned_return_minutes": [
+      125
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Claire Dubois",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Rome and back, 2 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Rome and back, 2 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Claire Dubois",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "TRAVEL_TIMES",
+        "outcome": "GRANTED",
+        "wording": "Ad hoc decision, with reasons: departure before 8:00 on 2 December is required, so that the day trip needs no hotel night and the traveller reaches the 11:00 meeting.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "CDG",
+        "destination": "FCO",
+        "date": "2026-12-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "dawn": {
+            "carrier": "AF",
+            "depart": "06:45",
+            "minutes": [
+              125
+            ]
+          },
+          "am": {
+            "carrier": "AF",
+            "depart": "09:30",
+            "minutes": [
+              125
+            ]
+          },
+          "pm": {
+            "carrier": "AF",
+            "depart": "14:10",
+            "minutes": [
+              125
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "dawn-economy",
+            "flight": "dawn",
+            "cabin": "ECONOMY",
+            "fare_cents": 16200
+          },
+          {
+            "slot": "am-economy",
+            "flight": "am",
+            "cabin": "ECONOMY",
+            "fare_cents": 21900
+          },
+          {
+            "slot": "pm-economy",
+            "flight": "pm",
+            "cabin": "ECONOMY",
+            "fare_cents": 14900
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "dawn-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "MEETING_TIMES",
+      "TRAVEL_HOURS_DECISION"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "DEPARTURE_RETURN"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        650,
+        655
+      ],
+      "sha256": "930f42dbcfaee4c061050eb50f82342d58063c38b283b249c00785cce98fc77e",
+      "quote": "However, a staff member going on mission cannot be required to leave before 8:00 or arrive after 22:00, either at the place of employment or at the place of the mission, unless the line manager adopts an ad hoc decision, giving reasons, which respects the principles set out in section 1.2. Roles. In this context, departure and arrival are taken to be the departure and arrival times of the main means of transport, that is to say take -off or landing in the case of an aircraft, and the times of departure and arrival of all other forms of transport.",
+      "why": "cannot be required to leave before 8:00 or arrive after 22:00 (take-off, landing)"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        656,
+        657
+      ],
+      "quote": "in the case of travel by air, not more than three and a half hours after the end of the meeting(s);",
+      "why": "the return journey, booked separately"
+    }
+  ],
+  "design_notes": "Only the 06:45 lands by 10:00 (the 09:30 lands 11:35, the cheaper 14:10 later still, 723-726). A departure before 8:00 cannot be required unless the line manager adopts an ad hoc decision giving reasons (650-655); it is on file, so the 06:45 at 16200 cents."
+}

@@ -1,0 +1,187 @@
+{
+  "id": "indigo-brae",
+  "category": "multi_rule",
+  "overlays": [
+    "multi_leg",
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm speaking at the Gulf cyber resilience forum in Dubai on Tuesday 8 December. I'd like the nonstop on Monday the 7th if possible; economy is fine.",
+  "trip": {
+    "traveller_name": "Thomas Jansen",
+    "traveller_title": "Resilience Expert",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Amsterdam, Netherlands",
+    "origin": "AMS",
+    "destination": "DXB",
+    "travel_date": "2026-12-07",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Gulf cyber resilience forum, Dubai, 8 December from 09:00",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 0,
+    "rail_fare_cents": 0,
+    "rail_minutes": 0,
+    "planned_return": "Dubai to Amsterdam on 9 December, booked separately",
+    "planned_return_minutes": [
+      245,
+      185
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": true,
+    "approvals": [
+      {
+        "signer_name": "Sanne de Vries",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Amsterdam to Dubai, 7-9 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Amsterdam to Dubai, 7-9 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "NONSTOP_FLIGHT",
+        "outcome": "REFUSED",
+        "wording": "Refused: the nonstop flights to Dubai are a manifestly unreasonable expense for this mission; book the connection.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "No train route links Amsterdam and Dubai."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "AMS",
+        "destination": "DXB",
+        "date": "2026-12-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kl": {
+            "carrier": "KL",
+            "depart": "10:20",
+            "minutes": [
+              385
+            ]
+          },
+          "ek": {
+            "carrier": "EK",
+            "depart": "11:50",
+            "minutes": [
+              385
+            ]
+          },
+          "tk": {
+            "carrier": "TK",
+            "depart": "09:05",
+            "via": [
+              "IST"
+            ],
+            "minutes": [
+              185,
+              245
+            ],
+            "layovers": [
+              90
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kl-economy",
+            "flight": "kl",
+            "cabin": "ECONOMY",
+            "fare_cents": 114000
+          },
+          {
+            "slot": "ek-economy",
+            "flight": "ek",
+            "cabin": "ECONOMY",
+            "fare_cents": 119000
+          },
+          {
+            "slot": "tk-economy",
+            "flight": "tk",
+            "cabin": "ECONOMY",
+            "fare_cents": 31000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "tk-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ALTERNATE_ROUTE_TOO_EXPENSIVE",
+      "DIRECT_FLIGHT_REFUSED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        719,
+        722
+      ],
+      "sha256": "fd0421ae326d60960eb6a2e9dda9be03733600a3baf42b2818ee557b9fe06794",
+      "quote": "Direct flights are normally preferred. However, the authorising officer for commitments may refuse to authorise a direct flight if it w ould represent a manifestly unreasonable expense given the arrangements for the mission. The principles set out in the section on 'Roles' must be duly taken into account when assessing whether an expense is manifestly unreasonable.",
+      "why": "direct flights normally preferred; the AO may refuse a manifestly unreasonable one"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        263,
+        266
+      ],
+      "quote": "the line manager may in particular ask the person concerned to use arrangements which provide optimum cost efficiency",
+      "why": "the line manager has asked for nothing"
+    }
+  ],
+  "design_notes": "Direct flights are normally preferred, but the authorising officer may refuse one that would be a manifestly unreasonable expense (719-722), and has refused it: Turkish via Istanbul, 31000 cents. Business would be allowed (a 245-minute segment, 730-732), but the traveller asks for economy."
+}

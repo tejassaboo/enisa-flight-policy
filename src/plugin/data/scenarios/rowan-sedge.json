@@ -1,0 +1,157 @@
+{
+  "id": "rowan-sedge",
+  "category": "hidden_clause",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me a flight to Zurich on Monday 7 December for the cyber exercise planning meeting on Tuesday morning.",
+  "trip": {
+    "traveller_name": "Tobias Wagner",
+    "traveller_title": "Exercise Planner",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Munich, Germany",
+    "origin": "MUC",
+    "destination": "ZRH",
+    "travel_date": "2026-12-07",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Cyber exercise planning meeting, Zurich, 8 December from 09:00",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 315,
+    "rail_fare_cents": 14800,
+    "rail_minutes": 210,
+    "planned_return": "Zurich to Munich nonstop on 8 December",
+    "planned_return_minutes": [
+      60
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Lukas Brenner",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Munich to Zurich, 7-8 December, means of transport as the guide allows.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Munich to Zurich, 7-8 December, means of transport as the guide allows.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MUC",
+        "destination": "ZRH",
+        "date": "2026-12-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "lx": {
+            "carrier": "LX",
+            "depart": "11:15"
+          },
+          "lh": {
+            "carrier": "LH",
+            "depart": "16:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "lx-economy",
+            "flight": "lx",
+            "cabin": "ECONOMY",
+            "fare_cents": 9600
+          },
+          {
+            "slot": "lh-economy",
+            "flight": "lh",
+            "cabin": "ECONOMY",
+            "fare_cents": 11800
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "lx-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "AIR_COST_EFFICIENT",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "RAIL_TRAVEL",
+      "TRANSPORT_TO_MISSION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        710,
+        712
+      ],
+      "sha256": "40efcb52e8b2fc56908d411d768c1024666696ac99584e5e00e42b67a1c74e5a",
+      "quote": "Staff going on mission are automatically authorised to travel by air if the outward and return journeys by rail would to tal at least 800 kilometres. Air travel is permitted for shorter distances when justified on grounds of cost-efficiency.",
+      "why": "air automatically authorised at 800 km of rail out and back; shorter if cost-efficient"
+    },
+    {
+      "lines": [
+        700,
+        701
+      ],
+      "sha256": "a11b2294638bc6aef561b29712db70953e3236c8ce1d34915e06b4d5329c32a1",
+      "quote": "The cost of rail travel is reimbursed on the basis of the first class rail fare for the shortest route (either by distance or in terms of time) between the place of employment and the place of the mission. The",
+      "why": "rail is reimbursed at the first class fare"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        663,
+        664
+      ],
+      "quote": "staff should book their tickets at the earliest opportunity in order to take advantage of the best rates available.",
+      "why": "book early: no bar on this booking"
+    }
+  ],
+  "design_notes": "Rail out and back totals 630 km, under 800, so air is not automatic; it is permitted for shorter distances when justified on grounds of cost-efficiency (710-712), and the 9600-cent fare is below the 14800-cent first-class rail fare that would otherwise be reimbursed (700-701)."
+}

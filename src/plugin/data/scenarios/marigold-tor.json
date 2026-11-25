@@ -1,0 +1,160 @@
+{
+  "id": "marigold-tor",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "juniper-bay",
+  "twin_fact": "first flight takes off 08:00 or 07:55",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I have a meeting in Rome at 14:00 on Thursday 10 December and need to land by 12:45. Please don't put me on a crack-of-dawn departure unless the guide says I have to take it.",
+  "trip": {
+    "traveller_name": "Carmen Vidal",
+    "traveller_title": "Policy Analyst",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Madrid, Spain",
+    "origin": "MAD",
+    "destination": "FCO",
+    "travel_date": "2026-12-10",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Coordination meeting with the Italian cybersecurity agency, Rome, 10 December from 14:00",
+    "must_land_by": "2026-12-10 12:45",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1960,
+    "rail_fare_cents": 41000,
+    "rail_minutes": 960,
+    "planned_return": "Rome to Madrid nonstop on 11 December",
+    "planned_return_minutes": [
+      150
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Javier Ortega",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Madrid to Rome, 10-11 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Madrid to Rome, 10-11 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MAD",
+        "destination": "FCO",
+        "date": "2026-12-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "first": {
+            "carrier": "IB",
+            "depart": "07:55",
+            "minutes": [
+              125
+            ]
+          },
+          "second": {
+            "carrier": "IB",
+            "depart": "10:15",
+            "minutes": [
+              125
+            ]
+          },
+          "third": {
+            "carrier": "IB",
+            "depart": "16:05",
+            "minutes": [
+              125
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "first-economy",
+            "flight": "first",
+            "cabin": "ECONOMY",
+            "fare_cents": 17600
+          },
+          {
+            "slot": "second-economy",
+            "flight": "second",
+            "cabin": "ECONOMY",
+            "fare_cents": 21400
+          },
+          {
+            "slot": "third-economy",
+            "flight": "third",
+            "cabin": "ECONOMY",
+            "fare_cents": 15900
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "second-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "MEETING_TIMES",
+      "TRAVEL_HOURS_PROTECTED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "DEPARTURE_RETURN",
+      "TRANSPORT_RULES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        650,
+        655
+      ],
+      "sha256": "930f42dbcfaee4c061050eb50f82342d58063c38b283b249c00785cce98fc77e",
+      "quote": "However, a staff member going on mission cannot be required to leave before 8:00 or arrive after 22:00, either at the place of employment or at the place of the mission, unless the line manager adopts an ad hoc decision, giving reasons, which respects the principles set out in section 1.2. Roles. In this context, departure and arrival are taken to be the departure and arrival times of the main means of transport, that is to say take -off or landing in the case of an aircraft, and the times of departure and arrival of all other forms of transport.",
+      "why": "cannot be required to leave before 8:00 or arrive after 22:00 (take-off, landing)"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The first flight takes off at 07:55, before 8:00; a staff member cannot be required to leave then without the line manager's ad hoc decision (650-655), and the traveller does not want it. The 10:15 lands in time: 21400 cents."
+}

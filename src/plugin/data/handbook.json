@@ -1,0 +1,16 @@
+{
+  "id": "enisa-flight-policy",
+  "name": "ENISA Guide to Missions Flight Policy",
+  "slug": "eu-enisa-missions",
+  "title": "ENISA Management Board Decision MB/2018/6 adopting implementing rules on Articles 11-13 of Annex VII to the Staff Regulations ('Guide to missions and authorised travel')",
+  "frozen_file": "eu-enisa-missions_policy.txt",
+  "sha256": "47a8fee4e30b699446bb7e1809c34c4f5e3fc1e05b60663c9a70f38d008c6fc9",
+  "raw_pdf_sha256": "60e8e66c47695d51d5425a3743afa6923750e6a490c3093ce067d7fe2ebb1e88",
+  "words": 14137,
+  "lines": 1247,
+  "source": "https://enisa.europa.eu/sites/default/files/all_files/MB_Decision_No_2018_6_on_missions_guide.pdf",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 32,
+  "currency": "EUR",
+  "background_offers": 0
+}

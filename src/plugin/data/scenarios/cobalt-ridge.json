@@ -1,0 +1,160 @@
+{
+  "id": "cobalt-ridge",
+  "category": "easy",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The incident-response workshop in Copenhagen starts at 12:00 on Thursday 3 December and I have to land by 11:00 to get there. A same-day flight, please; the cheapest one that works.",
+  "trip": {
+    "traveller_name": "Anja Becker",
+    "traveller_title": "Incident Response Expert",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Frankfurt am Main, Germany",
+    "origin": "FRA",
+    "destination": "CPH",
+    "travel_date": "2026-12-03",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Incident-response workshop, Copenhagen, 3 December from 12:00",
+    "must_land_by": "2026-12-03 11:00",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 860,
+    "rail_fare_cents": 25400,
+    "rail_minutes": 470,
+    "planned_return": "Copenhagen to Frankfurt nonstop on 4 December",
+    "planned_return_minutes": [
+      85
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Petra Hoffmann",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Copenhagen, 3-4 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Copenhagen, 3-4 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "FRA",
+        "destination": "CPH",
+        "date": "2026-12-03",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "early": {
+            "carrier": "LH",
+            "depart": "08:20"
+          },
+          "mid": {
+            "carrier": "LH",
+            "depart": "10:30"
+          },
+          "late": {
+            "carrier": "LH",
+            "depart": "13:00"
+          }
+        },
+        "offers": [
+          {
+            "slot": "early-economy",
+            "flight": "early",
+            "cabin": "ECONOMY",
+            "fare_cents": 22800
+          },
+          {
+            "slot": "mid-economy",
+            "flight": "mid",
+            "cabin": "ECONOMY",
+            "fare_cents": 17600
+          },
+          {
+            "slot": "late-economy",
+            "flight": "late",
+            "cabin": "ECONOMY",
+            "fare_cents": 15000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "early-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "AIR_AUTHORISED_RAIL_DISTANCE",
+      "LOWEST_FARE",
+      "MEETING_TIMES"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORT_TO_MISSION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    },
+    {
+      "lines": [
+        710,
+        712
+      ],
+      "sha256": "40efcb52e8b2fc56908d411d768c1024666696ac99584e5e00e42b67a1c74e5a",
+      "quote": "Staff going on mission are automatically authorised to travel by air if the outward and return journeys by rail would to tal at least 800 kilometres. Air travel is permitted for shorter distances when justified on grounds of cost-efficiency.",
+      "why": "air automatically authorised at 800 km of rail out and back; shorter if cost-efficient"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        656,
+        657
+      ],
+      "quote": "in the case of travel by air, not more than three and a half hours after the end of the meeting(s);",
+      "why": "the return journey, booked separately"
+    }
+  ],
+  "design_notes": "Economy at the lowest available rates 'taking into account the times of meetings' (723-726): the 10:30 and 13:00 flights land at 11:50 and 14:20, after the 11:00 limit, so the 08:20 flight at 22800 cents."
+}

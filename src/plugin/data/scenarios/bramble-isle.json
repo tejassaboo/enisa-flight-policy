@@ -1,0 +1,115 @@
+{
+  "id": "bramble-isle",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Could you book me a flight to Rome on Saturday 19 December? It's for a family holiday.",
+  "trip": {
+    "traveller_name": "Miriam Schneider",
+    "traveller_title": "Finance Assistant",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Frankfurt am Main, Germany",
+    "origin": "FRA",
+    "destination": "FCO",
+    "travel_date": "2026-12-19",
+    "booking_date": "2026-11-24",
+    "travel_kind": "PRIVATE_TRIP",
+    "purpose": "Family holiday in Rome",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "NO_DOCUMENT",
+    "rail_km": 1330,
+    "rail_fare_cents": 27900,
+    "rail_minutes": 720,
+    "planned_return": "Rome to Frankfurt nonstop on 2 January",
+    "planned_return_minutes": [],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "FRA",
+        "destination": "FCO",
+        "date": "2026-12-19",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "lh": {
+            "carrier": "LH",
+            "depart": "10:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "lh-economy",
+            "flight": "lh",
+            "cabin": "ECONOMY",
+            "fare_cents": 14500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "MISSION_DEFINITION",
+      "SCOPE"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        212,
+        213
+      ],
+      "sha256": "406e0b45c057ec2560499c644986c9cb244169f6d48a3cb74f4dcb16008a4a41",
+      "quote": "This guide covers both missions, covered by a mission order, and authorised travel, for example in connection with an external event.",
+      "why": "the guide covers missions and authorised travel"
+    },
+    {
+      "lines": [
+        218,
+        220
+      ],
+      "sha256": "d1bbdc24e3a25fb77b4ce786447533c6ec15abe52cf712dd926d9a59c4b4f5e7",
+      "quote": "A mission (instruction to travel) (see section 2. Missions covered by a mission order ) is travel away from the place of employment solely in the intere sts of the service, on the instructions of a line manager or the appointing authority.",
+      "why": "a mission is travel solely in the interests of the service"
+    },
+    {
+      "lines": [
+        384,
+        387
+      ],
+      "sha256": "e1d57d1db6a51ed7b3fa3649ef259f5f545d7e73c03e14a8ce26c83fd82a4587",
+      "quote": "A mission is travel away from the place of employment solely in the interests of the service, on the instructions of a line manager. It is normally paid for out of the budget. Missions must be covered by a mission order. Except in duly justified exceptional circums tances, the mission order is issued before the staff member leaves on mission.",
+      "why": "missions need a mission order"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The guide covers missions (travel solely in the interests of the service, under a mission order) and authorised travel (212-213, 218-220, 384-387). A family holiday is neither: the agency buys no ticket."
+}

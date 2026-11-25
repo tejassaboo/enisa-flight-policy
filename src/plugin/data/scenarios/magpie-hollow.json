@@ -1,0 +1,179 @@
+{
+  "id": "magpie-hollow",
+  "category": "flag",
+  "overlays": [
+    "approval_required",
+    "synonym"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "falcon-mere",
+    "zephyr-knoll"
+  ],
+  "ambiguity_note": "none: the authorising officer's derogation is awaited; the text is clear",
+  "request": "I'm accompanying the Commissioner to Madrid on Thursday 10 December and need to be on her 09:15 Air France flight, in the same class as her.",
+  "trip": {
+    "traveller_name": "Nathalie Girard",
+    "traveller_title": "Adviser to the Executive Director",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "The Member of the Commission responsible for digital affairs, flying business class on the 09:15 Air France flight",
+    "place_of_employment": "Paris, France",
+    "origin": "CDG",
+    "destination": "MAD",
+    "travel_date": "2026-12-10",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Delegation to the EU cybersecurity ministers' conference, Madrid, 10 December from 14:00",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1270,
+    "rail_fare_cents": 27500,
+    "rail_minutes": 560,
+    "planned_return": "Madrid to Paris nonstop on 11 December",
+    "planned_return_minutes": [
+      110
+    ],
+    "requested_cabin": "BUSINESS",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Claire Dubois",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Madrid, 10-11 December, by air, accompanying the Member of the Commission.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Paris to Madrid, 10-11 December, by air, accompanying the Member of the Commission.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "CABIN_DEROGATION",
+        "outcome": "PENDING",
+        "wording": "Requested: travel in the same class as the Member of the Commission accompanied, for overriding service-related reasons (briefing on board).",
+        "given_on": ""
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "CDG",
+        "destination": "MAD",
+        "date": "2026-12-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "af": {
+            "carrier": "AF",
+            "depart": "09:15",
+            "minutes": [
+              110
+            ]
+          },
+          "ib": {
+            "carrier": "IB",
+            "depart": "12:30",
+            "minutes": [
+              110
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "af-economy",
+            "flight": "af",
+            "cabin": "ECONOMY",
+            "fare_cents": 18400
+          },
+          {
+            "slot": "af-business",
+            "flight": "af",
+            "cabin": "BUSINESS",
+            "fare_cents": 62000
+          },
+          {
+            "slot": "ib-economy",
+            "flight": "ib",
+            "cabin": "ECONOMY",
+            "fare_cents": 16900
+          },
+          {
+            "slot": "ib-business",
+            "flight": "ib",
+            "cabin": "BUSINESS",
+            "fare_cents": 54000,
+            "seats": false
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "af-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "ACCOMPANYING_MEMBER_CLASS",
+      "APPROVAL_REQUIRED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "ROLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        733,
+        735
+      ],
+      "sha256": "fe0f665dc85f172a88ca6576069b2b569dc0a6ecbe2eb51ca9d931ae68426762",
+      "quote": "By derogation to points (1) - (3), if there are overriding service -related reasons, staff travelling on mission may be authorised to travel in the same class as the Member of the Commission they are accompanying.",
+      "why": "the class of the Member of the Commission accompanied, by derogation"
+    },
+    {
+      "lines": [
+        291,
+        295
+      ],
+      "sha256": "789b7e2899106a5ca4e4af441010435fc6737fbd849bd25f78d322dad0e9ae21",
+      "quote": "They authorise the mission or sign the authorisation to travel based on an estimate of expenditure and take responsibility for committing this expenditure. By doing so, they confirm that the mission or the authorised travel is appropriate, approve the practical arrangements (including any requests submitted by the staff member going on mission for a derogation f rom the general rules applicable), and adopt a decision on the corresponding expenditure certifying that the travel",
+      "why": "the authorising officer approves the arrangements, including derogations"
+    },
+    {
+      "lines": [
+        730,
+        732
+      ],
+      "sha256": "ac2c48c64e90f01f7215b2f241d5e55b6557f4114c326e48f1f3ad5a6d3b8520",
+      "quote": "3) in business class or equivalent, at the lowest available rates, taking into account the times of meetings and/or special features of the mission, if the outward or return journey includes at least one segment involving at least four hours' continuous flying time.",
+      "why": "business if a segment has at least four hours' continuous flying"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Business on a 110-minute flight needs the derogation of 733-735 ('may be authorised'), which the authorising officer approves (291-295); it is requested, not decided. Hold the Commissioner's business seat."
+}

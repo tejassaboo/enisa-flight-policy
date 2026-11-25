@@ -1,0 +1,161 @@
+{
+  "id": "hazel-tide",
+  "category": "flag",
+  "overlays": [
+    "unclear_phrase"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "garnet-sound",
+    "tamarind-gate"
+  ],
+  "ambiguity_note": {
+    "phrase": "if the outward or return journey includes",
+    "readings": [
+      "The condition is met by the trip as a whole: the return includes a 375-minute segment, so business may be booked on the outward flight too (Turkish, 89000 cents).",
+      "Each journey is judged by its own segments: the outward flight has none of four hours, so economy (Turkish, 23800 cents)."
+    ]
+  },
+  "request": "Business class on the flight to Istanbul on Monday 7 December if the guide allows it on this trip; otherwise economy.",
+  "trip": {
+    "traveller_name": "Laura Fischer",
+    "traveller_title": "Threat Intelligence Analyst",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Frankfurt am Main, Germany",
+    "origin": "FRA",
+    "destination": "IST",
+    "travel_date": "2026-12-07",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Two-stop mission: threat intelligence meeting, Istanbul, 8 December; then the Gulf forum, Dubai, 10 December",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 2550,
+    "rail_fare_cents": 52000,
+    "rail_minutes": 2160,
+    "planned_return": "Dubai to Frankfurt nonstop on 11 December, booked separately, scheduled at 375 minutes",
+    "planned_return_minutes": [
+      375
+    ],
+    "requested_cabin": "BUSINESS",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Petra Hoffmann",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Istanbul (7 December), Istanbul to Dubai (9 December), Dubai to Frankfurt (11 December), by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Frankfurt to Istanbul (7 December), Istanbul to Dubai (9 December), Dubai to Frankfurt (11 December), by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "The flight from Istanbul to Dubai on 9 December is booked separately."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "FRA",
+        "destination": "IST",
+        "date": "2026-12-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "tk": {
+            "carrier": "TK",
+            "depart": "10:10",
+            "minutes": [
+              160
+            ]
+          },
+          "lh": {
+            "carrier": "LH",
+            "depart": "14:25",
+            "minutes": [
+              160
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "tk-economy",
+            "flight": "tk",
+            "cabin": "ECONOMY",
+            "fare_cents": 23800
+          },
+          {
+            "slot": "tk-business",
+            "flight": "tk",
+            "cabin": "BUSINESS",
+            "fare_cents": 89000
+          },
+          {
+            "slot": "lh-economy",
+            "flight": "lh",
+            "cabin": "ECONOMY",
+            "fare_cents": 26500
+          },
+          {
+            "slot": "lh-business",
+            "flight": "lh",
+            "cabin": "BUSINESS",
+            "fare_cents": 96000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "tk-business",
+      "tk-economy"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NOT_NAMED"
+    ],
+    "clauses": [
+      "AIR_TRAVEL"
+    ],
+    "unclear_phrase": "if the outward or return journey includes"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        730,
+        732
+      ],
+      "sha256": "ac2c48c64e90f01f7215b2f241d5e55b6557f4114c326e48f1f3ad5a6d3b8520",
+      "quote": "3) in business class or equivalent, at the lowest available rates, taking into account the times of meetings and/or special features of the mission, if the outward or return journey includes at least one segment involving at least four hours' continuous flying time.",
+      "why": "business if a segment has at least four hours' continuous flying"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The outward nonstop is 160 minutes; the planned return from Dubai is a 375-minute nonstop. Lines 730-732 allow business 'if the outward or return journey includes' a qualifying segment, without saying whether that opens business on the other journey too."
+}

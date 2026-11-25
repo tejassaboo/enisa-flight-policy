@@ -1,0 +1,171 @@
+{
+  "id": "nettle-strand",
+  "category": "hidden_clause",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm on leave in Dublin when the Madrid workshop happens, so I'll go straight from there. The workshop starts at 9:30 on Thursday 10 December; please book me from Dublin on Wednesday the 9th.",
+  "trip": {
+    "traveller_name": "Katrin Vogel",
+    "traveller_title": "Awareness Programme Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Frankfurt am Main, Germany",
+    "origin": "DUB",
+    "destination": "MAD",
+    "travel_date": "2026-12-09",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Awareness-raising workshop, Madrid, 10 December from 09:30",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1850,
+    "rail_fare_cents": 38900,
+    "rail_minutes": 780,
+    "planned_return": "Madrid to Frankfurt nonstop on 10 December",
+    "planned_return_minutes": [
+      135
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Petra Hoffmann",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "VALIDATED_LEAVE",
+        "outcome": "GRANTED",
+        "wording": "Leave validated: 7-18 December, in Dublin.",
+        "given_on": "2026-10-30"
+      },
+      {
+        "signer_name": "Petra Hoffmann",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: departure from Dublin, where the staff member is on leave, to Madrid on 9 December; return to Frankfurt on 10 December; by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: departure from Dublin, where the staff member is on leave, to Madrid on 9 December; return to Frankfurt on 10 December; by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "The workshop was scheduled after the traveller's leave had been validated."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "DUB",
+        "destination": "MAD",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ei": {
+            "carrier": "EI",
+            "depart": "10:30"
+          },
+          "ib": {
+            "carrier": "IB",
+            "depart": "15:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "ei-economy",
+            "flight": "ei",
+            "cabin": "ECONOMY",
+            "fare_cents": 14900
+          },
+          {
+            "slot": "ib-economy",
+            "flight": "ib",
+            "cabin": "ECONOMY",
+            "fare_cents": 13700
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "ib-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LEAVE_PLACE_DEPARTURE",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "DEPARTURE_RETURN",
+      "LEAVE_INTERRUPTED"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        614,
+        616
+      ],
+      "sha256": "08f0e9cf1cfb9aa91e0841d0cafce971549efcff18c315a4a44cfea0b5c5de1e",
+      "quote": "If a mission is organised for dates on which the person concerned has applied for leave and had it validated by their line manager, he or she may either cancel their leave or keep it and depart on mission from the place where they are on leave.",
+      "why": "a mission on validated leave may depart from the place of leave"
+    },
+    {
+      "lines": [
+        617,
+        621
+      ],
+      "sha256": "2faff8821a6edf38cee637cf5ab5b5ffc745f00f70aaaba3cbbb3d7135cb185f",
+      "quote": "All costs resulting from this interruption of leave, including those incurred as a result of changing or cancelling leave, are reimbursed by virtue of Article 5 of Annex V to the Staff Regulations, subject to validation by the authorising officer for commitments when the mission order is signed. In that case, the staff member will depart on mission from the place where they are on leave, and return either to the place of employment or to the place where they were on leave, as they prefer.",
+      "why": "leave interrupted: costs reimbursed, AO validation when the order is signed"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        625,
+        626
+      ],
+      "quote": "all costs arising from this recall from leave (including for accompanying family) are reimbursed",
+      "why": "a recall from leave, which this is not"
+    }
+  ],
+  "design_notes": "A mission organised for dates of validated leave may start from the place of leave (614-616, 620-621), subject to the authorising officer's validation when the order is signed (617-619), which it is. The lowest fare from Dublin: Iberia 13700 cents."
+}

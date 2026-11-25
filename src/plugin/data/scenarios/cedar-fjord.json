@@ -1,0 +1,137 @@
+{
+  "id": "cedar-fjord",
+  "category": "refusal",
+  "overlays": [
+    "multi_traveller",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "My husband would like to come with me to Copenhagen for my mission on Wednesday 9 December. Could you book him on my flight?",
+  "trip": {
+    "traveller_name": "Willem de Jong",
+    "traveller_title": "Husband of Eva de Jong, Policy Officer",
+    "passenger": "FAMILY_MEMBER",
+    "accompanies": "Eva de Jong, Policy Officer, on mission to Copenhagen",
+    "place_of_employment": "Amsterdam, Netherlands",
+    "origin": "AMS",
+    "destination": "CPH",
+    "travel_date": "2026-12-09",
+    "booking_date": "2026-11-24",
+    "travel_kind": "PRIVATE_TRIP",
+    "purpose": "Joining his wife's mission to Copenhagen",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "NO_DOCUMENT",
+    "rail_km": 780,
+    "rail_fare_cents": 22500,
+    "rail_minutes": 660,
+    "planned_return": "Copenhagen to Amsterdam nonstop on 11 December",
+    "planned_return_minutes": [],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Sanne de Vries",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Eva de Jong: Amsterdam to Copenhagen, 9-11 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Eva de Jong: Amsterdam to Copenhagen, 9-11 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "AMS",
+        "destination": "CPH",
+        "date": "2026-12-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kl": {
+            "carrier": "KL",
+            "depart": "09:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "kl-economy",
+            "flight": "kl",
+            "cabin": "ECONOMY",
+            "fare_cents": 16200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "COMPANION_NOT_COVERED",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "MISSION_DEFINITION",
+      "ROLES",
+      "SCOPE"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        212,
+        213
+      ],
+      "sha256": "406e0b45c057ec2560499c644986c9cb244169f6d48a3cb74f4dcb16008a4a41",
+      "quote": "This guide covers both missions, covered by a mission order, and authorised travel, for example in connection with an external event.",
+      "why": "the guide covers missions and authorised travel"
+    },
+    {
+      "lines": [
+        239,
+        241
+      ],
+      "sha256": "b328fc7eed3e8c3899031072a2ddb95e26dc8636b11138c13ee0081f51363f09",
+      "quote": "The person concerned is the staff member going on mission or the person carrying out the authorised travel.",
+      "why": "the person concerned is the staff member"
+    },
+    {
+      "lines": [
+        218,
+        220
+      ],
+      "sha256": "d1bbdc24e3a25fb77b4ce786447533c6ec15abe52cf712dd926d9a59c4b4f5e7",
+      "quote": "A mission (instruction to travel) (see section 2. Missions covered by a mission order ) is travel away from the place of employment solely in the intere sts of the service, on the instructions of a line manager or the appointing authority.",
+      "why": "a mission is travel solely in the interests of the service"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The guide covers the person concerned, the staff member on mission (212-213, 239-241); a mission is travel in the interests of the service (218-220). The husband's trip is neither; the staff member's own signed order goes unused. The agency buys no ticket."
+}

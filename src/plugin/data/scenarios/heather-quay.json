@@ -1,0 +1,163 @@
+{
+  "id": "heather-quay",
+  "category": "easy",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "willow-crest",
+  "twin_fact": "the meeting may still move (UNSETTLED) or is confirmed (FIRM)",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me to Amsterdam on Tuesday 15 December for the threat-landscape meeting the next morning, on a ticket I can change, just in case. If the guide doesn't allow a changeable one, book what it allows; I have to be at the meeting.",
+  "trip": {
+    "traveller_name": "Lucía Romero",
+    "traveller_title": "Threat Analyst",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Madrid, Spain",
+    "origin": "MAD",
+    "destination": "AMS",
+    "travel_date": "2026-12-15",
+    "booking_date": "2026-11-24",
+    "travel_kind": "MISSION",
+    "purpose": "Threat-landscape working meeting, Amsterdam, 16 December",
+    "must_land_by": "",
+    "settledness": "UNSETTLED",
+    "costs_met_by": "AGENCY",
+    "rail_km": 1770,
+    "rail_fare_cents": 36500,
+    "rail_minutes": 690,
+    "planned_return": "Amsterdam to Madrid nonstop on 16 December",
+    "planned_return_minutes": [
+      140
+    ],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": true,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Javier Ortega",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Madrid to Amsterdam, 15-16 December, by air.",
+        "given_on": "2026-11-20"
+      },
+      {
+        "signer_name": "Eleni Papadaki",
+        "signer_title": "Head of Resources, authorising officer for commitments",
+        "role": "AUTHORISING_OFFICER",
+        "subject": "MISSION_ORDER",
+        "outcome": "GRANTED",
+        "wording": "Mission order signed: Madrid to Amsterdam, 15-16 December, by air.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "The host has said the meeting may still be moved to another week; the line manager expects a change."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MAD",
+        "destination": "AMS",
+        "date": "2026-12-15",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ib": {
+            "carrier": "IB",
+            "depart": "09:15"
+          },
+          "kl": {
+            "carrier": "KL",
+            "depart": "14:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "ib-saver",
+            "flight": "ib",
+            "cabin": "ECONOMY",
+            "fare_cents": 16800
+          },
+          {
+            "slot": "ib-flex",
+            "flight": "ib",
+            "cabin": "ECONOMY",
+            "fare_cents": 30500,
+            "refundable": true
+          },
+          {
+            "slot": "kl-saver",
+            "flight": "kl",
+            "cabin": "ECONOMY",
+            "fare_cents": 15900
+          },
+          {
+            "slot": "kl-flex",
+            "flight": "kl",
+            "cabin": "ECONOMY",
+            "fare_cents": 33800,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "ib-flex"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FLEXIBLE_FARE_CHANGE_RISK"
+    ],
+    "approvers": [
+      "AUTHORISING_OFFICER",
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        727,
+        729
+      ],
+      "sha256": "14d14a79f075c56bfdfb5447ef6ace133bc4df7d6431668db804846556f16276",
+      "quote": "2) in economy class or equivalent, at the lowest available rates for flexible tickets, taking into account the times of meetings and/or special features of the mission, if there is an appreciable risk that the mission will be cancelled or amended.",
+      "why": "flexible economy if there is an appreciable risk of cancellation or amendment"
+    },
+    {
+      "lines": [
+        723,
+        726
+      ],
+      "sha256": "901ac4318bd8408f4f829258e2726a860b5f9a2606e80c4417e8d653f8721653",
+      "quote": "As a general rule, air travel may be booked: 1) in economy class or equivalent, including cases where the ticket in question cannot be exchanged or refunded, at the lowest available rates, taking into account the times of meetings and/or special features of the mission,",
+      "why": "economy, non-refundable included, at the lowest available rates and meeting times"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        263,
+        266
+      ],
+      "quote": "the line manager may in particular ask the person concerned to use arrangements which provide optimum cost efficiency",
+      "why": "the line manager has asked for nothing"
+    }
+  ],
+  "design_notes": "The record says the meeting may still be moved: an appreciable risk that the mission will be amended, so economy at the lowest available rate for flexible tickets (727-729): Iberia's refundable fare, 30500 cents."
+}

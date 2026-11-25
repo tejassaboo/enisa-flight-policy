@@ -1,0 +1,141 @@
+{
+  "id": "dahlia-spur",
+  "category": "refusal",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The conference organisers booked me on the 09:05 flight to Paris on Thursday 10 December, but I'd rather take the 13:30 so I can finish some work first. Could the agency buy that one for me instead?",
+  "trip": {
+    "traveller_name": "Raquel Iglesias",
+    "traveller_title": "Research Officer",
+    "passenger": "STAFF_MEMBER",
+    "accompanies": "",
+    "place_of_employment": "Madrid, Spain",
+    "origin": "MAD",
+    "destination": "CDG",
+    "travel_date": "2026-12-10",
+    "booking_date": "2026-11-24",
+    "travel_kind": "AUTHORISED_TRAVEL",
+    "purpose": "Speaker at an academic security conference in Paris, 11 December",
+    "must_land_by": "",
+    "settledness": "FIRM",
+    "costs_met_by": "ORGANISER",
+    "rail_km": 1270,
+    "rail_fare_cents": 27500,
+    "rail_minutes": 560,
+    "planned_return": "Paris to Madrid on 11 December, booked by the organiser",
+    "planned_return_minutes": [],
+    "requested_cabin": "ECONOMY",
+    "wants_changeable_fare": false,
+    "prefers_nonstop": false,
+    "approvals": [
+      {
+        "signer_name": "Javier Ortega",
+        "signer_title": "Head of Unit",
+        "role": "LINE_MANAGER",
+        "subject": "AUTHORISATION_TO_TRAVEL",
+        "outcome": "GRANTED",
+        "wording": "Authorisation to travel signed: speaker at the conference, 10-11 December; transport and accommodation met by the organiser; no cost for the agency's budget.",
+        "given_on": "2026-11-20"
+      }
+    ],
+    "notes": [
+      "The organiser has issued an e-ticket on the 09:05 Iberia flight on 10 December."
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "out",
+        "origin": "MAD",
+        "destination": "CDG",
+        "date": "2026-12-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "ib": {
+            "carrier": "IB",
+            "depart": "09:05"
+          },
+          "af": {
+            "carrier": "AF",
+            "depart": "13:30"
+          }
+        },
+        "offers": [
+          {
+            "slot": "ib-economy",
+            "flight": "ib",
+            "cabin": "ECONOMY",
+            "fare_cents": 15600
+          },
+          {
+            "slot": "af-economy",
+            "flight": "af",
+            "cabin": "ECONOMY",
+            "fare_cents": 17400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "DOUBLE_BOOKING_PROHIBITED",
+      "TRANSPORT_PAID_BY_ORGANISER"
+    ],
+    "approvers": [
+      "LINE_MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AUTHORISED_TRAVEL",
+      "AUTHORISED_TRAVEL_GENERAL",
+      "AUTHORISED_TRAVEL_TRANSPORT",
+      "EXTERNAL_EVENTS",
+      "ORGANISER_EXPENSES",
+      "TRAVEL_AUTHORISATION_REQUEST"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        1111,
+        1112
+      ],
+      "sha256": "7526986e3a5dccc07bda05d128bd00e6a07c0286c0c411bdc0eafbcc37909368",
+      "quote": "As long as the relevant ethical rules are observed, the transport and/or accommodation costs of the person undertaking the authorised travel may be met by the organiser of the conference.",
+      "why": "the organiser may meet the transport costs of authorised travel"
+    },
+    {
+      "lines": [
+        1172,
+        1176
+      ],
+      "sha256": "69a5273f65af00c5a7c1556a30693f2b0f7cf4d92b5781d7dbe44b8eed1d333f",
+      "quote": "it must specify, for each of the following, whether the staff member is requesting reimbursement from the Commission, and, if not, who will meet the corresponding cost:",
+      "why": "the authorisation says who meets each cost, transport included"
+    },
+    {
+      "lines": [
+        1189,
+        1191
+      ],
+      "sha256": "7df44d1fde9688f8b0d8dcfe7af1543f8a0978a7f84493d5a0c20ddf41b5cf3c",
+      "quote": "Once the authorisation has been signed by the staff member's line manager and, if necessary, by the authorising officer, the staff member is formally authorised to travel and incur expenses within the limits set out in the authorisation.",
+      "why": "expenses only within the limits of the authorisation"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Authorised travel whose transport the organiser meets (1111-1112), as the signed authorisation states (1172-1176); the traveller may incur expenses only within its limits (1189-1191). The organiser's ticket is issued: the agency buys nothing."
+}
